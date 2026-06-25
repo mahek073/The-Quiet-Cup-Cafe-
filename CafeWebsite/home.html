@@ -8,20 +8,24 @@
 </head>
 
 <body>
+    <!-- Header Section -->
+  <header class="header">
+    <img src="pics/logo-pic.png" alt="The Quiet Cup Café Logo" class="logo">
 
-    <header class="header">
-       <img src="pics/logo-pic.png" alt="The Quiet Cup Café Logo" class="logo">
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
 
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-    </header>
+   <div class="floating-cart" id="cart-icon">
+    🛒 <span id="cart-count">0</span>
+</div>
+</header>
 
     <main>
 
@@ -82,93 +86,95 @@
         </section>
 
         <!-- Menu Section -->
-        <section class="menu-section">
-
-            <section class="menu-header">
-                <div class="menu-title-wrapper">
-                    <h1 class="menu-title">Our Coffee Menu</h1>
-                </div>
-            </section>
-
-           <section class="menu-items-section">
+        <section class="menu-items-section">
     <div class="menu-items-grid">
 
         <div class="menu-item">
             <img src="pics/turkishcoffee.jpeg" alt="Turkish Coffee">
             <h3>Turkish Coffee</h3>
             <p>₨1120</p>
+            <button class="add-to-cart" data-name="Turkish Coffee" data-price="1120">Add to Cart</button>
         </div>
 
         <div class="menu-item">
             <img src="pics/espresso.jpeg" alt="Espresso">
             <h3>Espresso</h3>
             <p>₨840</p>
+            <button class="add-to-cart" data-name="Espresso" data-price="840">Add to Cart</button>
         </div>
 
         <div class="menu-item">
             <img src="pics/americano.jpeg" alt="Americano">
             <h3>Americano</h3>
             <p>₨980</p>
+            <button class="add-to-cart" data-name="Americano" data-price="980">Add to Cart</button>
         </div>
 
         <div class="menu-item">
             <img src="pics/capuccino.jpeg" alt="Cappuccino">
             <h3>Cappuccino</h3>
             <p>₨1120</p>
+            <button class="add-to-cart" data-name="Cappuccino" data-price="1120">Add to Cart</button>
         </div>
 
         <div class="menu-item">
             <img src="pics/latte.jpeg" alt="Latte">
             <h3>Latte</h3>
             <p>₨1120</p>
+            <button class="add-to-cart" data-name="Latte" data-price="1120">Add to Cart</button>
         </div>
 
         <div class="menu-item">
             <img src="pics/mocha.jpeg" alt="Mocha">
             <h3>Mocha</h3>
             <p>₨1260</p>
+            <button class="add-to-cart" data-name="Mocha" data-price="1260">Add to Cart</button>
         </div>
 
         <div class="menu-item">
             <img src="pics/macchiato.jpeg" alt="Macchiato">
             <h3>Macchiato</h3>
             <p>₨1064</p>
+            <button class="add-to-cart" data-name="Macchiato" data-price="1064">Add to Cart</button>
         </div>
 
         <div class="menu-item">
             <img src="pics/affogato.jpeg" alt="Affogato">
             <h3>Affogato</h3>
             <p>₨1260</p>
+            <button class="add-to-cart" data-name="Affogato" data-price="1260">Add to Cart</button>
         </div>
 
         <div class="menu-item">
             <img src="pics/irishcoffee.jpeg" alt="Irish Coffee">
             <h3>Irish Coffee</h3>
             <p>₨1400</p>
+            <button class="add-to-cart" data-name="Irish Coffee" data-price="1400">Add to Cart</button>
         </div>
 
         <div class="menu-item">
             <img src="pics/cortado.jpeg" alt="Cortado">
             <h3>Cortado</h3>
             <p>₨1036</p>
+            <button class="add-to-cart" data-name="Cortado" data-price="1036">Add to Cart</button>
         </div>
 
         <div class="menu-item">
             <img src="pics/ristretto.jpeg" alt="Ristretto">
             <h3>Ristretto</h3>
             <p>₨896</p>
+            <button class="add-to-cart" data-name="Ristretto" data-price="896">Add to Cart</button>
         </div>
 
         <div class="menu-item">
             <img src="pics/coldbrew.jpeg" alt="Cold Brew">
             <h3>Cold Brew</h3>
             <p>₨1120</p>
+            <button class="add-to-cart" data-name="Cold Brew" data-price="1120">Add to Cart</button>
         </div>
 
     </div>
 </section>
-
-        </section>
 
         <!-- Reviews Section -->
         <section class="reviews-section">
@@ -225,6 +231,30 @@
 
             </div>
         </section>
+
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cart-sidebar">
+
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <span id="close-cart">&times;</span>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-total">
+        Total: ₨<span id="cart-total">0</span>
+    </div>
+
+    <form id="checkout-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="Shipping Address" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+</div>
 
     </main>
 <script src="script.js"></script>
